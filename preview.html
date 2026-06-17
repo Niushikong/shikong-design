@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIKONG · 设计师作品集</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">SHIKONG · 设计师</a>
+            <button class="hamburger" id="hamburger" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">首页</a></li>
+                <li><a href="#about" class="nav-link">关于我</a></li>
+                <li><a href="#works" class="nav-link">作品集</a></li>
+                <li><a href="#skills" class="nav-link">专业技能</a></li>
+                <li><a href="#contact" class="nav-link">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首页首屏 Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>创意设计 · 构筑视觉与空间之美</h1>
+            <h2>全职设计师 | 专注空间设计 / 3D可视化 / 数字视觉创作</h2>
+            <p>深耕设计领域多年，以落地思维+创意美学，打造兼具颜值与实用的设计作品</p>
+            <a href="#works" class="btn-primary">查看我的作品</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span>个人形象照</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>拥有<strong>10年专业设计经验</strong>，持有多项设计专利，主攻室内工装、新零售空间、医院空间、3D电子孪生沙盘、AI数字人、动态漫游动画等方向。</p>
+                    <p>擅长从需求出发，融合美学、功能、落地性三大核心，完成从概念构思、方案设计、三维可视化到落地跟进的全流程设计工作。始终坚持「创意不脱离实用，美学服务于场景」的设计理念。</p>
+                    <div class="tags">
+                        <span class="tag">空间设计</span>
+                        <span class="tag">3D可视化</span>
+                        <span class="tag">电子孪生</span>
+                        <span class="tag">视觉美陈</span>
+                        <span class="tag">AI数字设计</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集 -->
+    <section class="section works" id="works">
+        <div class="container">
+            <h2 class="section-title">核心作品集</h2>
+            
+            <!-- 分类标签 -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="space">空间设计</button>
+                <button class="filter-btn" data-filter="3d">3D沙盘/漫游</button>
+                <button class="filter-btn" data-filter="visual">视觉美陈</button>
+                <button class="filter-btn" data-filter="ai">AI数字作品</button>
+            </div>
+
+            <!-- 作品网格 -->
+            <div class="works-grid">
+                <!-- 作品1 -->
+                <div class="work-card" data-category="space">
+                    <div class="work-image">
+                        <div class="image-placeholder"><span>作品图</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>商业新零售空间设计</h3>
+                        <span class="work-type">室内工装 / 门店美陈</span>
+                        <p>结合品牌调性打造沉浸式消费空间，优化动线与视觉层次，方案已落地使用。</p>
+                    </div>
+                </div>
+
+                <!-- 作品2 -->
+                <div class="work-card" data-category="space">
+                    <div class="work-image">
+                        <div class="image-placeholder"><span>作品图</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>牙科医院整体空间设计</h3>
+                        <span class="work-type">医疗空间设计</span>
+                        <p>兼顾医疗功能性、舒适感与视觉氛围，弱化冰冷感，打造温馨专业诊疗环境。</p>
+                    </div>
+                </div>
+
+                <!-- 作品3 -->
+                <div class="work-card" data-category="3d">
+                    <div class="work-image">
+                        <div class="image-placeholder"><span>作品图</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>小区电子孪生沙盘</h3>
+                        <span class="work-type">3D可视化 / 数字沙盘</span>
+                        <p>三维建模+实景还原，支持日照、噪音、户型可视化模拟，用于楼盘展示。</p>
+                    </div>
+                </div>
+
+                <!-- 作品4 -->
+                <div class="work-card" data-category="3d">
+                    <div class="work-image">
+                        <div class="image-placeholder"><span>作品图</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>3D动态看盘&漫游动画</h3>
+                        <span class="work-type">动态视觉 / 三维动画</span>
+                        <p>全场景动态漫游演示，立体呈现园区布局、配套与建筑细节。</p>
+                    </div>
+                </div>
+
+                <!-- 作品5 -->
+                <div class="work-card" data-category="visual">
+                    <div class="work-image">
+                        <div class="image-placeholder"><span>作品图</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>线下活动视觉美陈设计</h3>
+                        <span class="work-type">视觉设计 / 场景布置</span>
+                        <p>根据活动主题定制视觉方案，适配线下落地搭建，视觉吸睛且成本可控。</p>
+                    </div>
+                </div>
+
+                <!-- 作品6 -->
+                <div class="work-card" data-category="ai">
+                    <div class="work-image">
+                        <div class="image-placeholder"><span>作品图</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>AI数字人形象&互动设计</h3>
+                        <span class="work-type">数字IP / AI视觉设计</span>
+                        <p>原创数字人形象设计、动作调试与场景适配，应用于展厅、线上宣传。</p>
+                    </div>
+                </div>
+
+                <!-- 作品7 -->
+                <div class="work-card" data-category="space">
+                    <div class="work-image">
+                        <div class="image-placeholder"><span>作品图</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>办公空间整体规划设计</h3>
+                        <span class="work-type">工装设计</span>
+                        <p>合理划分功能分区，兼顾办公效率、采光与团队交流氛围。</p>
+                    </div>
+                </div>
+
+                <!-- 作品8 -->
+                <div class="work-card" data-category="visual">
+                    <div class="work-image">
+                        <div class="image-placeholder"><span>作品图</span></div>
+                    </div>
+                    <div class="work-info">
+                        <h3>品牌视觉物料整套设计</h3>
+                        <span class="work-type">平面视觉 / 版式设计</span>
+                        <p>统一品牌视觉规范，完成海报、展板、宣传物料全套设计输出。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专业技能 -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">专业技能</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><span class="icon">🎨</span> 设计软件</h3>
+                    <ul class="skill-list">
+                        <li>
+                            <span class="skill-name">3ds Max</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                        </li>
+                        <li>
+                            <span class="skill-name">CAD</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <span class="skill-name">SketchUp</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </li>
+                        <li>
+                            <span class="skill-name">V-Ray</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </li>
+                        <li>
+                            <span class="skill-name">Photoshop</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                        </li>
+                        <li>
+                            <span class="skill-name">C4D</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><span class="icon">💼</span> 专业能力</h3>
+                    <div class="ability-tags">
+                        <span class="ability-tag">空间方案设计</span>
+                        <span class="ability-tag">施工图绘制</span>
+                        <span class="ability-tag">3D建模渲染</span>
+                        <span class="ability-tag">电子孪生制作</span>
+                        <span class="ability-tag">动画剪辑</span>
+                        <span class="ability-tag">视觉美陈落地</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><span class="icon">🏆</span> 设计资质</h3>
+                    <ul class="honor-list">
+                        <li>多项原创设计专利</li>
+                        <li>全流程项目落地经验</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><span class="icon">🤝</span> 综合能力</h3>
+                    <div class="ability-tags">
+                        <span class="ability-tag">需求沟通</span>
+                        <span class="ability-tag">方案汇报</span>
+                        <span class="ability-tag">现场对接</span>
+                        <span class="ability-tag">跨团队协作</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">联系我</h2>
+            <p class="contact-intro">期待与您交流设计、项目合作与创意探讨</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div class="contact-text">
+                        <span class="label">电话</span>
+                        <span class="value">138-0000-0000</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">💬</span>
+                    <div class="contact-text">
+                        <span class="label">微信</span>
+                        <span class="value">shikong_design</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div class="contact-text">
+                        <span class="label">邮箱</span>
+                        <span class="value">shikong@shturl.com</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div class="contact-text">
+                        <span class="label">地址</span>
+                        <span class="value">北京市</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 SHIKONG作品集 | 原创设计 保留所有权利</p>
+        </div>
+    </footer>
+
+    <!-- 暗黑模式切换按钮 -->
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    </button>
+
+    <!-- 回到顶部按钮 -->
+    <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

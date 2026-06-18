@@ -547,7 +547,37 @@ const Skills = () => (
 );
 
 // 联系我组件
-const Contact = () => (
+const Contact = () => {
+  const copyToClipboard = (text, label) => {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert(`${label}已复制：${text}\n请打开微信添加好友`);
+      }).catch(() => {
+        fallbackCopy(text, label);
+      });
+    } else {
+      fallbackCopy(text, label);
+    }
+  };
+
+  const fallbackCopy = (text, label) => {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      alert(`${label}已复制：${text}\n请打开微信添加好友`);
+    } catch (err) {
+      alert(`请手动复制${label}：${text}`);
+    }
+    document.body.removeChild(textArea);
+  };
+
+  return (
   <section className="section contact" id="contact">
     <div className="container">
       <h2 className="section-title">联系我</h2>
@@ -564,14 +594,26 @@ const Contact = () => (
           <span className="contact-icon">💬</span>
           <div className="contact-text">
             <span className="label">微信</span>
-            <span className="value">Niu-shikong</span>
+            <span 
+              className="value clickable" 
+              onClick={() => copyToClipboard('Niu-shikong', '微信号')}
+              style={{ cursor: 'pointer' }}
+            >
+              Niu-shikong
+            </span>
           </div>
         </div>
         <div className="contact-item">
           <span className="contact-icon">📧</span>
           <div className="contact-text">
             <span className="label">邮箱</span>
-            <span className="value">2926035017@qq.com</span>
+            <span 
+              className="value clickable"
+              onClick={() => copyToClipboard('2926035017@qq.com', '邮箱')}
+              style={{ cursor: 'pointer' }}
+            >
+              2926035017@qq.com
+            </span>
           </div>
         </div>
         <div className="contact-item">
@@ -584,7 +626,8 @@ const Contact = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 // 页脚组件
 const Footer = () => (

@@ -1122,6 +1122,15 @@ img {
     color: inherit;
 }
 
+.contact-text .value.clickable {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.contact-text .value.clickable:hover {
+    color: var(--accent);
+}
+
 /* ===== 页脚 ===== */
 .footer {
     background: #1a1d2e;

@@ -175,7 +175,7 @@ const Hero = () => {
       <div className="hero-content">
         <h1>创意 · 构筑视觉与空间之美</h1>
         <h2>全案设计师 | 专注空间设计 / 3D可视化 / 数字视觉创作</h2>
-        <p>深耕设计领域多年，以落地思维+创意美学，打造兼具颜值与实用的设计作品</p>
+        <p>深耕设计领域多年，以落地思维+创意美学<br/>打造兼具颜值与实用的设计作品</p>
         <button className="btn-primary" onClick={scrollToWorks}>查看我的作品</button>
       </div>
       <div className="scroll-indicator">

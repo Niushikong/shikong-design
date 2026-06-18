@@ -174,7 +174,7 @@ const Hero = () => {
       </div>
       <div className="hero-content">
         <h1>创意 · 构筑视觉与空间之美</h1>
-        <h2>全案设计师 | <span className="subtitle-highlight">专注空间设计 / 3D可视化 / 数字视觉创作</span></h2>
+        <h2><span className="h2-main">全案设计师 | </span><span className="h2-sub">专注空间设计 / 3D可视化 / 数字视觉创作</span></h2>
         <p>深耕设计领域多年，以落地思维+创意美学<br/>打造兼具颜值与实用的设计作品</p>
         <button className="btn-primary" onClick={scrollToWorks}>查看我的作品</button>
       </div>

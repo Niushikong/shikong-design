@@ -264,6 +264,14 @@ img {
     padding-right: 1rem;
 }
 
+.hero h2 .h2-main {
+    font-size: inherit;
+}
+
+.hero h2 .h2-sub {
+    font-size: inherit;
+}
+
 .hero p {
     font-size: clamp(0.75rem, 2vw, 1.1rem);
     margin-bottom: var(--spacing-lg);
@@ -1205,15 +1213,17 @@ img {
     }
 
     .hero h2 {
-        font-size: 0.9rem;
+        font-size: 0.9375rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
 
-    .hero h2 .subtitle-highlight {
-        display: block;
-        font-size: 1.25rem;
-        margin-top: 0.5rem;
+    .hero h2 .h2-main {
+        font-size: 15px;
+    }
+
+    .hero h2 .h2-sub {
+        font-size: 10px;
     }
 
     .hero p {

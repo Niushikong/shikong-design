@@ -590,15 +590,18 @@ const Contact = () => {
             <a href="tel:18053114523" className="value">18053114523</a>
           </div>
         </div>
-        <div className="contact-item">
+        <div className="contact-item" onClick={() => {
+          const isWeixin = /MicroMessenger/i.test(navigator.userAgent);
+          if (isWeixin) {
+            window.location.href = 'weixin://';
+          } else {
+            copyToClipboard('Niu-shikong', '微信号');
+          }
+        }}>
           <span className="contact-icon">💬</span>
           <div className="contact-text">
             <span className="label">微信</span>
-            <span 
-              className="value clickable" 
-              onClick={() => copyToClipboard('Niu-shikong', '微信号')}
-              style={{ cursor: 'pointer' }}
-            >
+            <span className="value clickable" style={{ cursor: 'pointer' }}>
               Niu-shikong
             </span>
           </div>

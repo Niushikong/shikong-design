@@ -1210,6 +1210,12 @@ img {
         padding-right: 0.5rem;
     }
 
+    .hero h2 .subtitle-highlight {
+        display: block;
+        font-size: 1.25rem;
+        margin-top: 0.5rem;
+    }
+
     .hero p {
         font-size: 0.85rem;
         padding-left: 1rem;

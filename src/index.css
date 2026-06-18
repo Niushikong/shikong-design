@@ -238,6 +238,11 @@ img {
     position: relative;
     z-index: 1;
     max-width: 800px;
+    pointer-events: none;
+}
+
+.hero-content button {
+    pointer-events: auto;
 }
 
 .hero h1 {

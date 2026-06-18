@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import Antigravity from './Antigravity';
+import { useState, useEffect, lazy, Suspense } from 'react';
+const Antigravity = lazy(() => import('./Antigravity'));
 
 // 作品数据
 const workDetails = {
@@ -156,21 +156,23 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-canvas">
-        <Antigravity
-          count={300}
-          magnetRadius={12}
-          ringRadius={7}
-          waveSpeed={0.4}
-          waveAmplitude={3.5}
-          particleSize={0.045}
-          lerpSpeed={0.11}
-          color="#00ffd8"
-          autoAnimate={true}
-          particleVariance={1}
-          depthFactor={2.3}
-          particleShape="capsule"
-          fieldStrength={15}
-        />
+        <Suspense fallback={<div className="canvas-placeholder"></div>}>
+          <Antigravity
+            count={300}
+            magnetRadius={12}
+            ringRadius={7}
+            waveSpeed={0.4}
+            waveAmplitude={3.5}
+            particleSize={0.045}
+            lerpSpeed={0.11}
+            color="#00ffd8"
+            autoAnimate={true}
+            particleVariance={1}
+            depthFactor={2.3}
+            particleShape="capsule"
+            fieldStrength={15}
+          />
+        </Suspense>
       </div>
       <div className="hero-content">
         <h1>创意 · 构筑视觉与空间之美</h1>
@@ -643,16 +645,32 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    const handleLoad = () => {
       setIsLoading(false);
-    }, 1000);
+    };
+
+    if (document.readyState === 'complete') {
+      setTimeout(handleLoad, 500);
+    } else {
+      window.addEventListener('load', () => setTimeout(handleLoad, 500));
+    }
+
+    return () => window.removeEventListener('load', handleLoad);
   }, []);
 
   return (
     <>
       {isLoading && (
-        <div className="loader">
-          <div className="loader-spinner"></div>
+        <div className={`preloader ${!isLoading ? 'hidden' : ''}`}>
+          <div className="preloader-content">
+            <div className="preloader-logo">SHIKONG</div>
+            <div className="preloader-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div className="preloader-text">设计 · 构筑空间之美</div>
+          </div>
         </div>
       )}
       <Navbar />

@@ -9,4 +9,14 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ['three', '@react-three/fiber'],
+        },
+      },
+    },
+    minify: 'esbuild',
+  },
 });

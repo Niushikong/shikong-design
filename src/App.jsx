@@ -593,7 +593,15 @@ const Contact = () => {
                 <a href="tel:18053114523" className="value">18053114523</a>
               </div>
             </div>
-            <div className="contact-item" onClick={() => setShowQRModal(true)}>
+            <div className="contact-item" onClick={() => {
+              const isWeixin = /MicroMessenger/i.test(navigator.userAgent);
+              if (isWeixin) {
+                setShowQRModal(true);
+              } else {
+                copyToClipboard('Niu-shikong', '微信号');
+                window.location.href = 'weixin://';
+              }
+            }}>
               <span className="contact-icon">💬</span>
               <div className="contact-text">
                 <span className="label">微信</span>

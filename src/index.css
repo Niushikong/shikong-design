@@ -1131,6 +1131,66 @@ img {
     color: var(--accent);
 }
 
+/* ===== 二维码弹窗 ===== */
+.qr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+.qr-modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 320px;
+    position: relative;
+    animation: scaleIn 0.3s ease;
+}
+
+.qr-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.qr-modal-close:hover {
+    background: #e0e0e0;
+}
+
+.qr-modal-content h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.qr-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+.qr-tip {
+    font-size: 0.85rem;
+    color: #666;
+}
+
 /* ===== 页脚 ===== */
 .footer {
     background: #1a1d2e;

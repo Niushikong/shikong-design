@@ -548,10 +548,12 @@ const Skills = () => (
 
 // 联系我组件
 const Contact = () => {
+  const [showQRModal, setShowQRModal] = useState(false);
+
   const copyToClipboard = (text, label) => {
     if (navigator.clipboard) {
       navigator.clipboard.writeText(text).then(() => {
-        alert(`${label}已复制：${text}\n请打开微信添加好友`);
+        alert(`${label}已复制：${text}`);
       }).catch(() => {
         fallbackCopy(text, label);
       });
@@ -570,7 +572,7 @@ const Contact = () => {
     textArea.select();
     try {
       document.execCommand('copy');
-      alert(`${label}已复制：${text}\n请打开微信添加好友`);
+      alert(`${label}已复制：${text}`);
     } catch (err) {
       alert(`请手动复制${label}：${text}`);
     }
@@ -578,57 +580,63 @@ const Contact = () => {
   };
 
   return (
-  <section className="section contact" id="contact">
-    <div className="container">
-      <h2 className="section-title">联系我</h2>
-      <p className="contact-intro">期待与您交流设计、项目合作与创意探讨</p>
-      <div className="contact-info">
-        <div className="contact-item">
-          <span className="contact-icon">📞</span>
-          <div className="contact-text">
-            <span className="label">电话</span>
-            <a href="tel:18053114523" className="value">18053114523</a>
+    <>
+      <section className="section contact" id="contact">
+        <div className="container">
+          <h2 className="section-title">联系我</h2>
+          <p className="contact-intro">期待与您交流设计、项目合作与创意探讨</p>
+          <div className="contact-info">
+            <div className="contact-item">
+              <span className="contact-icon">📞</span>
+              <div className="contact-text">
+                <span className="label">电话</span>
+                <a href="tel:18053114523" className="value">18053114523</a>
+              </div>
+            </div>
+            <div className="contact-item" onClick={() => setShowQRModal(true)}>
+              <span className="contact-icon">💬</span>
+              <div className="contact-text">
+                <span className="label">微信</span>
+                <span className="value clickable" style={{ cursor: 'pointer' }}>
+                  Niu-shikong
+                </span>
+              </div>
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">📧</span>
+              <div className="contact-text">
+                <span className="label">邮箱</span>
+                <span 
+                  className="value clickable"
+                  onClick={() => copyToClipboard('2926035017@qq.com', '邮箱')}
+                  style={{ cursor: 'pointer' }}
+                >
+                  2926035017@qq.com
+                </span>
+              </div>
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">📍</span>
+              <div className="contact-text">
+                <span className="label">地址</span>
+                <span className="value">北京市</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="contact-item" onClick={() => {
-          const isWeixin = /MicroMessenger/i.test(navigator.userAgent);
-          if (isWeixin) {
-            window.location.href = 'weixin://';
-          } else {
-            copyToClipboard('Niu-shikong', '微信号');
-          }
-        }}>
-          <span className="contact-icon">💬</span>
-          <div className="contact-text">
-            <span className="label">微信</span>
-            <span className="value clickable" style={{ cursor: 'pointer' }}>
-              Niu-shikong
-            </span>
+      </section>
+
+      {showQRModal && (
+        <div className="qr-modal" onClick={() => setShowQRModal(false)}>
+          <div className="qr-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="qr-modal-close" onClick={() => setShowQRModal(false)}>×</button>
+            <h3>扫码添加微信</h3>
+            <img src="wechat-qr.png" alt="微信二维码" className="qr-image" />
+            <p className="qr-tip">长按二维码识别添加好友</p>
           </div>
         </div>
-        <div className="contact-item">
-          <span className="contact-icon">📧</span>
-          <div className="contact-text">
-            <span className="label">邮箱</span>
-            <span 
-              className="value clickable"
-              onClick={() => copyToClipboard('2926035017@qq.com', '邮箱')}
-              style={{ cursor: 'pointer' }}
-            >
-              2926035017@qq.com
-            </span>
-          </div>
-        </div>
-        <div className="contact-item">
-          <span className="contact-icon">📍</span>
-          <div className="contact-text">
-            <span className="label">地址</span>
-            <span className="value">北京市</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      )}
+    </>
   );
 };
 

@@ -265,11 +265,11 @@ img {
 }
 
 .hero h2 .h2-main {
-    font-size: inherit;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .hero h2 .h2-sub {
-    font-size: inherit;
+    font-size: clamp(0.65rem, 1.5vw, 1rem);
 }
 
 .hero p {
@@ -822,6 +822,8 @@ img {
     background: rgba(0, 0, 0, 0.6);
     border-radius: var(--radius);
 }
+
+.thumbnail-list {
     display: flex;
     gap: var(--spacing-xs);
 }

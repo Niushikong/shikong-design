@@ -1193,14 +1193,32 @@ img {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .hero h1 {
         font-size: 1.75rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
-    
+
     .hero h2 {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
-    
+
+    .hero p {
+        font-size: 0.85rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     .filter-tabs {
         gap: 4px;
     }

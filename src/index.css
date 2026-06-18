@@ -1050,6 +1050,11 @@ img {
     font-weight: 500;
 }
 
+.contact-text .value a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* ===== 页脚 ===== */
 .footer {
     background: #1a1d2e;

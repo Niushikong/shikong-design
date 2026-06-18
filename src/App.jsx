@@ -555,7 +555,7 @@ const Contact = () => (
           <span className="contact-icon">📞</span>
           <div className="contact-text">
             <span className="label">电话</span>
-            <span className="value">18053114523</span>
+            <a href="tel:18053114523" className="value">18053114523</a>
           </div>
         </div>
         <div className="contact-item">

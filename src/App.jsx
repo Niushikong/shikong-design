@@ -555,21 +555,21 @@ const Contact = () => (
           <span className="contact-icon">📞</span>
           <div className="contact-text">
             <span className="label">电话</span>
-            <span className="value">138-0000-0000</span>
+            <span className="value">18053114523</span>
           </div>
         </div>
         <div className="contact-item">
           <span className="contact-icon">💬</span>
           <div className="contact-text">
             <span className="label">微信</span>
-            <span className="value">shikong_design</span>
+            <span className="value">Niu-shikong</span>
           </div>
         </div>
         <div className="contact-item">
           <span className="contact-icon">📧</span>
           <div className="contact-text">
             <span className="label">邮箱</span>
-            <span className="value">shikong@shturl.com</span>
+            <span className="value">2926035017@qq.com</span>
           </div>
         </div>
         <div className="contact-item">

@@ -66,6 +66,13 @@ const workDetails = {
     idea: '采用轻奢设计风格，以灰色与金色为主调，搭配大理石与金属材质。主卧、客厅、餐厅等空间注重细节处理，营造高品质的居住氛围。通过精致的材质渲染与灯光设计，呈现优雅奢华的生活空间。',
     summary: '3D可视化方案成功帮助业主直观了解轻奢风格设计，提升了客户满意度。方案获得业主高度认可，成为后续装修施工的重要参考依据。'
   },
+  22: {
+    title: '现代风',
+    type: '3D可视化 / 室内设计',
+    bg: '为某住宅项目制作现代风格室内设计3D可视化方案，展示简约时尚的居住空间效果，帮助业主提前感知空间布局与装饰效果。',
+    idea: '采用现代设计风格，以黑白灰为主调，搭配亮色点缀。客厅、卧室、阳台等空间注重功能性与美观性的平衡，营造舒适实用的居住环境。通过简洁的线条与现代材质，呈现时尚简约的生活空间。',
+    summary: '3D可视化方案成功帮助业主直观了解现代风格设计，提升了客户满意度。方案获得业主高度认可，成为后续装修施工的重要参考依据。'
+  },
   7: {
     title: '线下活动视觉美陈设计',
     type: '视觉设计 / 场景布置',
@@ -319,6 +326,7 @@ const Works = () => {
     { id: 19, title: '现代轻奢风', type: '3D可视化 / 室内设计', category: '3d', desc: '高端住宅项目室内设计3D可视化方案，展示现代轻奢风格的居住空间效果。', images: ['modern-1.jpg', 'modern-2.jpg', 'modern-3.jpg', 'modern-4.jpg', 'modern-5.jpg', 'modern-6.jpg', 'modern-7.jpg', 'modern-8.jpg', 'modern-9.jpg', 'modern-10.jpg', 'modern-11.jpg', 'modern-12.jpg', 'modern-13.jpg', 'modern-14.png', 'modern-15.jpg', 'modern-16.jpg', 'modern-17.jpg', 'modern-18.jpg', 'modern-19.jpg', 'modern-20.png', 'modern-21.jpg', 'modern-22.jpg', 'modern-23.jpg', 'modern-24.png', 'modern-25.png', 'modern-26.jpg', 'modern-27.jpg'] },
     { id: 20, title: '北欧风', type: '3D可视化 / 室内设计', category: '3d', desc: '北欧风格室内设计3D可视化方案，展示清新自然的居住空间效果。', images: ['nordic-1.jpg', 'nordic-2.jpg', 'nordic-3.jpg', 'nordic-4.jpg', 'nordic-5.jpg', 'nordic-6.jpg', 'nordic-7.jpg', 'nordic-8.jpg', 'nordic-9.jpg', 'nordic-10.jpg', 'nordic-11.jpg', 'nordic-12.jpg', 'nordic-13.jpg', 'nordic-14.jpg', 'nordic-15.jpg', 'nordic-16.jpg', 'nordic-17.jpg', 'nordic-18.jpg', 'nordic-19.png'] },
     { id: 21, title: '轻奢风', type: '3D可视化 / 室内设计', category: '3d', desc: '轻奢风格室内设计3D可视化方案，展示精致优雅的居住空间效果。', images: ['luxury-1.jpg', 'luxury-2.jpg', 'luxury-3.jpg', 'luxury-4.jpg', 'luxury-5.jpg', 'luxury-6.jpg', 'luxury-7.jpg', 'luxury-8.jpg', 'luxury-9.png', 'luxury-10.png', 'luxury-11.png', 'luxury-12.png', 'luxury-13.jpg', 'luxury-14.jpg', 'luxury-15.jpg', 'luxury-16.jpg'] },
+    { id: 22, title: '现代风', type: '3D可视化 / 室内设计', category: '3d', desc: '现代风格室内设计3D可视化方案，展示简约时尚的居住空间效果。', images: ['modern-style-1.jpg', 'modern-style-2.jpg', 'modern-style-3.jpg', 'modern-style-4.jpg', 'modern-style-5.jpg', 'modern-style-6.jpg', 'modern-style-7.jpg', 'modern-style-8.jpg', 'modern-style-9.jpg', 'modern-style-10.jpg', 'modern-style-11.jpg', 'modern-style-12.jpg', 'modern-style-13.jpg', 'modern-style-14.jpg', 'modern-style-15.jpg', 'modern-style-16.jpg', 'modern-style-17.jpg', 'modern-style-18.jpg', 'modern-style-19.jpg', 'modern-style-20.jpg', 'modern-style-21.jpg', 'modern-style-22.jpg', 'modern-style-23.jpg', 'modern-style-24.jpg', 'modern-style-25.jpg'] },
   ];
 
   const filteredWorks = activeFilter === 'all' 

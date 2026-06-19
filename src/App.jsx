@@ -72,6 +72,13 @@ const workDetails = {
     bg: '为某新消费品牌进行全套视觉物料设计，需要建立统一的品牌视觉规范，完成海报、展板、宣传物料等全套设计输出。',
     idea: '基于品牌定位，制定完整的视觉识别系统（VI），包括标志规范、色彩体系、字体规范、图形元素等。设计系列海报、产品包装、线下物料、线上素材，确保视觉风格统一协调。',
     summary: '视觉系统成功帮助品牌建立市场认知度，品牌形象获得消费者广泛认可。设计方案被品牌方沿用至今，成为品牌资产的重要组成部分。'
+  },
+  11: {
+    title: '单品设计',
+    type: '门店美陈 / 单品展示',
+    bg: '为特普丽墙纸布艺品牌打造单品展示设计方案，涵盖高端壁纸系列、布艺窗帘、配套软装单品等产品视觉呈现。',
+    idea: '采用场景化展示设计，将单品融入真实生活场景，让客户直观感受产品在实际空间中的应用效果。运用专业的灯光设计和陈列方式，凸显产品质感与设计细节。',
+    summary: '单品设计方案有效提升了产品展示效果和客户购买体验，帮助品牌实现从单品销售到场景化营销的升级转型。'
   }
 };
 
@@ -221,7 +228,7 @@ const Works = () => {
   const [activeCategory, setActiveCategory] = useState(null);
 
   const works = [
-    { id: 1, title: '特普丽墙纸布艺门店标准化设计', type: '门店美陈 / 连锁品牌', category: 'space', desc: '为特普丽墙纸打造全国连锁门店标准化设计体系，统一品牌视觉语言与空间体验。', images: ['work1.jpg', 'work1-2.jpg', 'work1-3.jpg', 'work1-4.jpg', 'work1-5.jpg', 'work1-6.jpg', 'work1-product-1.jpg', 'work1-product-2.jpg', 'work1-product-3.jpg'], imageCategories: { '品牌店': {prefix: 'work1', exclude: ['channel', 'product'], labels: ['主入口展示区', '产品陈列区', '洽谈区设计', '样板间展示', '灯光效果', '整体鸟瞰']}, '单品设计': {prefix: 'work1-product', labels: ['高端壁纸系列', '布艺窗帘展示', '配套软装单品']} } },
+    { id: 1, title: '特普丽墙纸布艺门店标准化设计', type: '门店美陈 / 连锁品牌', category: 'space', desc: '为特普丽墙纸打造全国连锁门店标准化设计体系，统一品牌视觉语言与空间体验。', images: ['work1.jpg', 'work1-2.jpg', 'work1-3.jpg', 'work1-4.jpg', 'work1-5.jpg', 'work1-6.jpg'], imageCategories: { '品牌店': {prefix: 'work1', exclude: ['channel', 'product'], labels: ['主入口展示区', '产品陈列区', '洽谈区设计', '样板间展示', '灯光效果', '整体鸟瞰']} } },
     { id: 2, title: '渠道店', type: '门店美陈 / 连锁品牌', category: 'space', desc: '特普丽墙纸渠道店标准化设计，涵盖一字型、L型、U型三种空间布局方案，适配不同门店面积与场地条件。', images: ['work1-channel-s1-1.jpg', 'work1-channel-s1-2.jpg', 'work1-channel-s1-3.jpg', 'work1-channel-s1-4.jpg', 'work1-channel-s1-5.jpg', 'work1-channel-s1-6.jpg', 'work1-channel-l1.jpg', 'work1-channel-l2.jpg', 'work1-channel-l3.jpg', 'work1-channel-l4.jpg', 'work1-channel-l5.jpg', 'work1-channel-l6.jpg', 'work1-channel-l7.jpg', 'work1-channel-l8.jpg', 'work1-channel-u1.jpg', 'work1-channel-u2.jpg', 'work1-channel-u3.jpg', 'work1-channel-u4.jpg'], imageCategories: { '渠道店': {subCategories: {'一字型': {prefix: 'work1-channel-s1', labels: ['一型', '一型', '一型', '一型', '一型', '一型']}, 'L型': {prefix: 'work1-channel-l', labels: ['L型', 'L型', 'L型', 'L型', 'L型', 'L型', 'L型', 'L型']}, 'U型': {prefix: 'work1-channel-u', labels: ['U型', 'U型', 'U型', 'U型']}}} } },
     { id: 3, title: '58到家门店标准化设计', type: '室内工装 / 连锁品牌', category: 'space', desc: '为58到家线下服务门店设计标准化空间方案，提升品牌形象与服务体验。', images: ['work2.png'] },
     { id: 4, title: '牙科医院整体空间设计', type: '医疗空间设计', category: 'space', desc: '兼顾医疗功能性、舒适感与视觉氛围，弱化冰冷感，打造温馨专业诊疗环境。' },
@@ -231,6 +238,7 @@ const Works = () => {
     { id: 8, title: 'AI数字人形象&互动设计', type: '数字IP / AI视觉设计', category: 'ai', desc: '原创数字人形象设计、动作调试与场景适配，应用于展厅、线上宣传。' },
     { id: 9, title: '办公空间整体规划设计', type: '工装设计', category: 'space', desc: '合理划分功能分区，兼顾办公效率、采光与团队交流氛围。' },
     { id: 10, title: '品牌视觉物料整套设计', type: '平面视觉 / 版式设计', category: 'visual', desc: '统一品牌视觉规范，完成海报、展板、宣传物料全套设计输出。' },
+    { id: 11, title: '单品设计', type: '门店美陈 / 单品展示', category: 'space', desc: '特普丽墙纸布艺单品设计展示，涵盖高端壁纸系列、布艺窗帘、配套软装单品等。', images: ['work1-product-1.jpg', 'work1-product-2.jpg', 'work1-product-3.jpg'] },
   ];
 
   const filteredWorks = activeFilter === 'all' 

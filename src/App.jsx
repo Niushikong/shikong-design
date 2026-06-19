@@ -229,7 +229,7 @@ const Works = () => {
 
   const works = [
     { id: 1, title: '特普丽墙纸布艺门店标准化设计', type: '门店美陈 / 连锁品牌', category: 'space', desc: '为特普丽墙纸打造全国连锁门店标准化设计体系，统一品牌视觉语言与空间体验。', images: ['work1.jpg', 'work1-2.jpg', 'work1-3.jpg', 'work1-4.jpg', 'work1-5.jpg', 'work1-6.jpg', 'work1-7.jpg'] },
-    { id: 2, title: '渠道店', type: '门店美陈 / 连锁品牌', category: 'space', desc: '特普丽墙纸渠道店标准化设计，涵盖一字型、L型、U型三种空间布局方案，适配不同门店面积与场地条件。', images: ['work1-channel-s1-1.jpg', 'work1-channel-s1-2.jpg', 'work1-channel-s1-3.jpg', 'work1-channel-s1-4.jpg', 'work1-channel-s1-5.jpg', 'work1-channel-s1-6.jpg', 'work1-channel-l1.jpg', 'work1-channel-l2.jpg', 'work1-channel-l3.jpg', 'work1-channel-l4.jpg', 'work1-channel-l5.jpg', 'work1-channel-l6.jpg', 'work1-channel-l7.jpg', 'work1-channel-l8.jpg', 'work1-channel-u1.jpg', 'work1-channel-u2.jpg', 'work1-channel-u3.jpg', 'work1-channel-u4.jpg'], imageCategories: { '渠道店': {subCategories: {'一字型': {prefix: 'work1-channel-s1', labels: ['一型', '一型', '一型', '一型', '一型', '一型']}, 'L型': {prefix: 'work1-channel-l', labels: ['L型', 'L型', 'L型', 'L型', 'L型', 'L型', 'L型', 'L型']}, 'U型': {prefix: 'work1-channel-u', labels: ['U型', 'U型', 'U型', 'U型']}}} } },
+    { id: 2, title: '渠道店', type: '门店美陈 / 连锁品牌', category: 'space', desc: '特普丽墙纸渠道店标准化设计，涵盖一字型、L型、U型三种空间布局方案，适配不同门店面积与场地条件。', images: ['work1-channel-s1-1.jpg', 'work1-channel-s1-2.jpg', 'work1-channel-s1-3.jpg', 'work1-channel-s1-4.jpg', 'work1-channel-s1-5.jpg', 'work1-channel-s1-6.jpg', 'work1-channel-l1.jpg', 'work1-channel-l2.jpg', 'work1-channel-l3.jpg', 'work1-channel-l4.jpg', 'work1-channel-l5.jpg', 'work1-channel-l6.jpg', 'work1-channel-l7.jpg', 'work1-channel-l8.jpg', 'work1-channel-u1.jpg', 'work1-channel-u2.jpg', 'work1-channel-u3.jpg', 'work1-channel-u4.jpg'] },
     { id: 3, title: '58到家门店标准化设计', type: '室内工装 / 连锁品牌', category: 'space', desc: '为58到家线下服务门店设计标准化空间方案，提升品牌形象与服务体验。', images: ['work2.png'] },
     { id: 4, title: '牙科医院整体空间设计', type: '医疗空间设计', category: 'space', desc: '兼顾医疗功能性、舒适感与视觉氛围，弱化冰冷感，打造温馨专业诊疗环境。' },
     { id: 5, title: '小区电子孪生沙盘', type: '3D可视化 / 数字沙盘', category: '3d', desc: '三维建模+实景还原，支持日照、噪音、户型可视化模拟，用于楼盘展示。' },
@@ -333,142 +333,17 @@ const Works = () => {
                 </div>
               </div>
               <div className="modal-gallery">
-                {selectedWork.imageCategories && Object.keys(selectedWork.imageCategories).length > 0 && (
-                  <>
-                    <div className="category-tabs">
-                      <button 
-                        className={`category-tab ${activeCategory === null ? 'active' : ''}`}
-                        onClick={() => setActiveCategory(null)}
-                      >
-                        全部
-                      </button>
-                      {Object.keys(selectedWork.imageCategories).map(cat => (
-                        <button 
-                          key={cat}
-                          className={`category-tab ${activeCategory === cat || activeCategory?.startsWith(cat + '-') ? 'active' : ''}`}
-                          onClick={() => setActiveCategory(cat)}
-                        >
-                          {cat}
-                        </button>
-                      ))}
-                    </div>
-                    {Object.keys(selectedWork.imageCategories).map(cat => {
-                      const config = selectedWork.imageCategories[cat];
-                      if (config.subCategories && (activeCategory === cat || activeCategory?.startsWith(cat + '-'))) {
-                        return (
-                          <div key={cat} className="sub-category-tabs">
-                            <button 
-                              className={`sub-category-tab ${activeCategory === cat + '-all' ? 'active' : ''}`}
-                              onClick={() => setActiveCategory(cat + '-all')}
-                            >
-                              全部
-                            </button>
-                            {Object.keys(config.subCategories).map(subCat => (
-                              <button 
-                                key={subCat}
-                                className={`sub-category-tab ${activeCategory === cat + '-' + subCat ? 'active' : ''}`}
-                                onClick={() => setActiveCategory(cat + '-' + subCat)}
-                              >
-                                {subCat}
-                              </button>
-                            ))}
-                          </div>
-                        );
-                      }
-                      return null;
-                    })}
-                  </>
-                )}
                 {selectedWork.images && selectedWork.images.length > 0 ? (
                   <div className="single-column-grid">
-                    {(() => {
-                      let displayImages = selectedWork.images;
-                      let labels = [];
-                      
-                      if (activeCategory && selectedWork.imageCategories) {
-                        let found = false;
-                        
-                        for (const cat of Object.keys(selectedWork.imageCategories)) {
-                          const config = selectedWork.imageCategories[cat];
-                          
-                          if (activeCategory === cat) {
-                            if (config.subCategories) {
-                              const allSubImages = [];
-                              const allLabels = [];
-                              for (const subCat of Object.keys(config.subCategories)) {
-                                const subConfig = config.subCategories[subCat];
-                                const subImages = selectedWork.images.filter(img => img.startsWith(subConfig.prefix));
-                                allSubImages.push(...subImages);
-                                allLabels.push(...(subConfig.labels || []));
-                              }
-                              displayImages = allSubImages;
-                              labels = allLabels;
-                            } else {
-                              displayImages = selectedWork.images.filter(img => {
-                                const match = img.startsWith(config.prefix);
-                                if (config.exclude) {
-                                  return match && !config.exclude.some(ex => img.includes(ex));
-                                }
-                                return match;
-                              });
-                              labels = config.labels || [];
-                            }
-                            found = true;
-                            break;
-                          }
-                          
-                          if (activeCategory.startsWith(cat + '-')) {
-                            const subCat = activeCategory.substring(cat.length + 1);
-                            if (config.subCategories) {
-                              if (subCat === 'all') {
-                                const allSubImages = [];
-                                const allLabels = [];
-                                for (const s of Object.keys(config.subCategories)) {
-                                  const subConfig = config.subCategories[s];
-                                  const subImages = selectedWork.images.filter(img => img.startsWith(subConfig.prefix));
-                                  allSubImages.push(...subImages);
-                                  allLabels.push(...(subConfig.labels || []));
-                                }
-                                displayImages = allSubImages;
-                                labels = allLabels;
-                              } else if (config.subCategories[subCat]) {
-                                const subConfig = config.subCategories[subCat];
-                                displayImages = selectedWork.images.filter(img => img.startsWith(subConfig.prefix));
-                                labels = subConfig.labels || [];
-                              }
-                            }
-                            found = true;
-                            break;
-                          }
-                        }
-                        
-                        if (!found) {
-                          const directConfig = selectedWork.imageCategories[activeCategory];
-                          if (directConfig && !directConfig.subCategories) {
-                            displayImages = selectedWork.images.filter(img => {
-                              const match = img.startsWith(directConfig.prefix);
-                              if (directConfig.exclude) {
-                                return match && !directConfig.exclude.some(ex => img.includes(ex));
-                              }
-                              return match;
-                            });
-                            labels = directConfig.labels || [];
-                          }
-                        }
-                      }
-                      
-                      return displayImages.map((imgSrc, index) => {
-                        return (
-                          <div 
-                            key={index} 
-                            className="single-column-item"
-                            onClick={() => openFullscreen(selectedWork.images.indexOf(imgSrc))}
-                          >
-                            <img src={imgSrc} alt={`作品图${index + 1}`} />
-                          </div>
-                        );
-                      });
-                    })()}
+                    {selectedWork.images.map((imgSrc, index) => (
+                      <div 
+                        key={index} 
+                        className="single-column-item"
+                        onClick={() => openFullscreen(index)}
+                      >
+                        <img src={imgSrc} alt={`作品图${index + 1}`} />
+                      </div>
+                    ))}
                   </div>
                 ) : (
                   <div className="image-placeholder large"><span>作品大图</span></div>

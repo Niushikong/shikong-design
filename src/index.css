@@ -1425,6 +1425,14 @@ img {
         border-width: 0;
     }
     
+    .work-info {
+        padding: 4px 8px;
+    }
+    
+    .work-info h3 {
+        font-size: 0.7rem;
+    }
+    
     .contact-info {
         grid-template-columns: 1fr;
     }

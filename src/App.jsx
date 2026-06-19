@@ -121,6 +121,13 @@ const workDetails = {
     bg: '为雅宝红城项目设计水吧休闲空间，需要打造温馨舒适的休闲氛围，满足业主日常休闲、社交聚会等需求，提升社区生活品质。',
     idea: '采用现代简约设计风格，以蓝色与木色为主调，营造清新自然的水吧氛围。合理规划吧台操作区、休闲座位区、储物区等功能空间，注重灯光设计与软装搭配，打造舒适惬意的休闲场所。',
     summary: '水吧设计方案成功营造了温馨舒适的休闲空间，成为社区居民喜爱的社交场所，有效提升了项目的居住体验与社区活力。'
+  },
+  18: {
+    title: '道具设计',
+    type: '空间设计 / 道具定制',
+    bg: '为各类商业空间设计定制道具方案，涵盖收银台、背景墙、屏风、展示柜等多种商业道具，满足品牌形象展示与功能需求。',
+    idea: '根据品牌调性与空间需求，定制化设计各类商业道具。注重材质选择与工艺细节，确保道具既美观又实用。运用模块化设计思路，支持快速组装与灵活调整，适配不同场景需求。',
+    summary: '道具设计方案有效提升了商业空间的展示效果与品牌形象，帮助客户实现空间功能与视觉效果的双重提升，获得众多品牌客户的认可与合作。'
   }
 };
 
@@ -287,6 +294,7 @@ const Works = () => {
     { id: 15, title: '58同城总部会议接待室', type: '空间设计 / 办公空间', category: 'space', desc: '为58同城总部设计会议接待室空间，满足大型会议、商务接待、媒体发布等多种功能需求。', images: ['58meeting-1.jpg', '58meeting-2.jpg', '58meeting-3.jpg', '58meeting-4.jpg', '58meeting-5.jpg'] },
     { id: 16, title: '济南雷风展览展示有限公司', type: '空间设计 / 展览展示', category: 'space', desc: '为济南雷风展览展示有限公司设计企业展厅空间，展示公司业务范围、核心产品与技术实力。', images: ['leifeng-1.jpg', 'leifeng-2.jpg', 'leifeng-3.jpg', 'leifeng-4.jpg', 'leifeng-5.jpg'] },
     { id: 17, title: '雅宝红城水吧', type: '空间设计 / 商业空间', category: 'space', desc: '为雅宝红城项目设计水吧休闲空间，打造温馨舒适的休闲氛围，提升社区生活品质。', images: ['yabao-1.jpg', 'yabao-2.jpg', 'yabao-3.jpg', 'yabao-4.jpg'] },
+    { id: 18, title: '道具设计', type: '空间设计 / 道具定制', category: 'space', desc: '为各类商业空间设计定制道具方案，涵盖收银台、背景墙、屏风、展示柜等多种商业道具。', images: ['prop-1.jpg', 'prop-2.jpg', 'prop-3.jpg', 'prop-4.jpg', 'prop-5.jpg', 'prop-6.jpg', 'prop-7.jpg', 'prop-8.jpg', 'prop-9.jpg', 'prop-10.jpg', 'prop-11.jpg'] },
   ];
 
   const filteredWorks = activeFilter === 'all' 

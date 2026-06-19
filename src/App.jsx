@@ -59,6 +59,13 @@ const workDetails = {
     idea: '采用北欧设计风格，以白色与木色为主调，搭配绿色植物装饰。客厅、卧室、厨房等空间注重采光与通风，营造明亮舒适的居住环境。通过简洁的线条与温馨的配色，呈现自然质朴的生活氛围。',
     summary: '3D可视化方案成功帮助业主直观了解北欧风格设计，提升了客户满意度。方案获得业主高度认可，成为后续装修施工的重要参考依据。'
   },
+  21: {
+    title: '轻奢风',
+    type: '3D可视化 / 室内设计',
+    bg: '为某高端住宅项目制作轻奢风格室内设计3D可视化方案，展示精致优雅的居住空间效果，帮助业主提前感知空间布局与装饰效果。',
+    idea: '采用轻奢设计风格，以灰色与金色为主调，搭配大理石与金属材质。主卧、客厅、餐厅等空间注重细节处理，营造高品质的居住氛围。通过精致的材质渲染与灯光设计，呈现优雅奢华的生活空间。',
+    summary: '3D可视化方案成功帮助业主直观了解轻奢风格设计，提升了客户满意度。方案获得业主高度认可，成为后续装修施工的重要参考依据。'
+  },
   7: {
     title: '线下活动视觉美陈设计',
     type: '视觉设计 / 场景布置',
@@ -311,6 +318,7 @@ const Works = () => {
     { id: 18, title: '道具设计', type: '空间设计 / 道具定制', category: 'space', desc: '为各类商业空间设计定制道具方案，涵盖收银台、背景墙、屏风、展示柜等多种商业道具。', images: ['prop-1.jpg', 'prop-2.jpg', 'prop-3.jpg', 'prop-4.jpg', 'prop-5.jpg', 'prop-6.jpg', 'prop-7.jpg', 'prop-8.jpg', 'prop-9.jpg', 'prop-10.jpg', 'prop-11.jpg'] },
     { id: 19, title: '现代轻奢风', type: '3D可视化 / 室内设计', category: '3d', desc: '高端住宅项目室内设计3D可视化方案，展示现代轻奢风格的居住空间效果。', images: ['modern-1.jpg', 'modern-2.jpg', 'modern-3.jpg', 'modern-4.jpg', 'modern-5.jpg', 'modern-6.jpg', 'modern-7.jpg', 'modern-8.jpg', 'modern-9.jpg', 'modern-10.jpg', 'modern-11.jpg', 'modern-12.jpg', 'modern-13.jpg', 'modern-14.png', 'modern-15.jpg', 'modern-16.jpg', 'modern-17.jpg', 'modern-18.jpg', 'modern-19.jpg', 'modern-20.png', 'modern-21.jpg', 'modern-22.jpg', 'modern-23.jpg', 'modern-24.png', 'modern-25.png', 'modern-26.jpg', 'modern-27.jpg'] },
     { id: 20, title: '北欧风', type: '3D可视化 / 室内设计', category: '3d', desc: '北欧风格室内设计3D可视化方案，展示清新自然的居住空间效果。', images: ['nordic-1.jpg', 'nordic-2.jpg', 'nordic-3.jpg', 'nordic-4.jpg', 'nordic-5.jpg', 'nordic-6.jpg', 'nordic-7.jpg', 'nordic-8.jpg', 'nordic-9.jpg', 'nordic-10.jpg', 'nordic-11.jpg', 'nordic-12.jpg', 'nordic-13.jpg', 'nordic-14.jpg', 'nordic-15.jpg', 'nordic-16.jpg', 'nordic-17.jpg', 'nordic-18.jpg', 'nordic-19.png'] },
+    { id: 21, title: '轻奢风', type: '3D可视化 / 室内设计', category: '3d', desc: '轻奢风格室内设计3D可视化方案，展示精致优雅的居住空间效果。', images: ['luxury-1.jpg', 'luxury-2.jpg', 'luxury-3.jpg', 'luxury-4.jpg', 'luxury-5.jpg', 'luxury-6.jpg', 'luxury-7.jpg', 'luxury-8.jpg', 'luxury-9.png', 'luxury-10.png', 'luxury-11.png', 'luxury-12.png', 'luxury-13.jpg', 'luxury-14.jpg', 'luxury-15.jpg', 'luxury-16.jpg'] },
   ];
 
   const filteredWorks = activeFilter === 'all' 

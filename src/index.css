@@ -550,9 +550,8 @@ img {
 
 /* 作品网格 */
 .works-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
+    column-count: 4;
+    column-gap: var(--spacing-md);
 }
 
 .work-card {
@@ -563,6 +562,8 @@ img {
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
     cursor: pointer;
+    break-inside: avoid;
+    margin-bottom: var(--spacing-md);
 }
 
 .work-card:hover {
@@ -1327,7 +1328,7 @@ img {
 /* ===== 响应式设计 ===== */
 @media (max-width: 992px) {
     .works-grid {
-        grid-template-columns: repeat(2, 1fr);
+        column-count: 3;
     }
     
     .skills-grid {
@@ -1394,7 +1395,7 @@ img {
     }
     
     .works-grid {
-        grid-template-columns: 1fr;
+        column-count: 2;
     }
     
     .contact-info {

@@ -39,11 +39,18 @@ const workDetails = {
     summary: '系统投入使用后，客户看房效率提升50%，销售转化率显著提高。项目获得地产营销创新奖，技术方案被推广至多个项目应用。'
   },
   6: {
-    title: '3D动态看盘&漫游动画',
+    title: '3D看盘',
     type: '动态视觉 / 三维动画',
     bg: '为某大型园区项目制作三维漫游动画，用于线上宣传与招商展示。需要立体呈现园区整体布局、建筑细节与配套设施。',
     idea: '采用电影级渲染技术，制作5分钟完整漫游动画。设计多条游览路线，涵盖园区入口、办公区、商业区、景观带等核心区域。配合专业配音与背景音乐，打造沉浸式观看体验。',
     summary: '动画在招商推介会上获得高度评价，成功助力项目签约多个重点企业。视频在网络平台播放量突破百万，有效提升了项目知名度。'
+  },
+  19: {
+    title: '现代轻奢风',
+    type: '3D可视化 / 室内设计',
+    bg: '为某高端住宅项目制作室内设计3D可视化方案，展示现代轻奢风格的居住空间效果，帮助业主提前感知空间布局与装饰效果。',
+    idea: '采用现代轻奢设计风格，以灰色与米色为主调，搭配金属质感的装饰元素。客厅、卧室、厨房、餐厅等空间均采用开放式布局，增强空间通透感。通过精致的材质渲染与灯光设计，呈现高品质的居住氛围。',
+    summary: '3D可视化方案成功帮助业主直观了解设计方案，提升了客户满意度。方案获得业主高度认可，成为后续装修施工的重要参考依据。'
   },
   7: {
     title: '线下活动视觉美陈设计',
@@ -282,7 +289,7 @@ const Works = () => {
     { id: 3, title: '58到家门店标准化设计', type: '室内工装 / 连锁品牌', category: 'space', desc: '为58到家线下服务门店设计标准化空间方案，提升品牌形象与服务体验。', images: ['home-entry.jpg', 'home-vip.jpg', 'home-meeting.jpg', 'home-kid.jpg'] },
     { id: 4, title: '牙科医院整体空间设计', type: '医疗空间设计', category: 'space', desc: '兼顾医疗功能性、舒适感与视觉氛围，弱化冰冷感，打造温馨专业诊疗环境。' },
     { id: 5, title: '小区电子孪生沙盘', type: '3D可视化 / 数字沙盘', category: '3d', desc: '三维建模+实景还原，支持日照、噪音、户型可视化模拟，用于楼盘展示。' },
-    { id: 6, title: '3D动态看盘&漫游动画', type: '动态视觉 / 三维动画', category: '3d', desc: '全场景动态漫游演示，立体呈现园区布局、配套与建筑细节。' },
+    { id: 6, title: '3D看盘', type: '动态视觉 / 三维动画', category: '3d', desc: '全场景动态漫游演示，立体呈现园区布局、配套与建筑细节。' },
     { id: 7, title: '线下活动视觉美陈设计', type: '视觉设计 / 场景布置', category: 'visual', desc: '根据活动主题定制视觉方案，适配线下落地搭建，视觉吸睛且成本可控。' },
     { id: 8, title: 'AI数字人形象&互动设计', type: '数字IP / AI视觉设计', category: 'ai', desc: '原创数字人形象设计、动作调试与场景适配，应用于展厅、线上宣传。' },
     { id: 9, title: '办公空间整体规划设计', type: '工装设计', category: 'space', desc: '合理划分功能分区，兼顾办公效率、采光与团队交流氛围。' },
@@ -295,6 +302,7 @@ const Works = () => {
     { id: 16, title: '济南雷风展览展示有限公司', type: '空间设计 / 展览展示', category: 'space', desc: '为济南雷风展览展示有限公司设计企业展厅空间，展示公司业务范围、核心产品与技术实力。', images: ['leifeng-1.jpg', 'leifeng-2.jpg', 'leifeng-3.jpg', 'leifeng-4.jpg', 'leifeng-5.jpg'] },
     { id: 17, title: '雅宝红城水吧', type: '空间设计 / 商业空间', category: 'space', desc: '为雅宝红城项目设计水吧休闲空间，打造温馨舒适的休闲氛围，提升社区生活品质。', images: ['yabao-1.jpg', 'yabao-2.jpg', 'yabao-3.jpg', 'yabao-4.jpg'] },
     { id: 18, title: '道具设计', type: '空间设计 / 道具定制', category: 'space', desc: '为各类商业空间设计定制道具方案，涵盖收银台、背景墙、屏风、展示柜等多种商业道具。', images: ['prop-1.jpg', 'prop-2.jpg', 'prop-3.jpg', 'prop-4.jpg', 'prop-5.jpg', 'prop-6.jpg', 'prop-7.jpg', 'prop-8.jpg', 'prop-9.jpg', 'prop-10.jpg', 'prop-11.jpg'] },
+    { id: 19, title: '现代轻奢风', type: '3D可视化 / 室内设计', category: '3d', desc: '高端住宅项目室内设计3D可视化方案，展示现代轻奢风格的居住空间效果。', images: ['modern-1.jpg', 'modern-2.jpg', 'modern-3.jpg', 'modern-4.jpg', 'modern-5.jpg', 'modern-6.jpg', 'modern-7.jpg', 'modern-8.jpg', 'modern-9.jpg', 'modern-10.jpg', 'modern-11.jpg', 'modern-12.jpg', 'modern-13.jpg', 'modern-14.png', 'modern-15.jpg', 'modern-16.jpg', 'modern-17.jpg', 'modern-18.jpg', 'modern-19.jpg', 'modern-20.png', 'modern-21.jpg', 'modern-22.jpg', 'modern-23.jpg', 'modern-24.png', 'modern-25.png', 'modern-26.jpg', 'modern-27.jpg'] },
   ];
 
   const filteredWorks = activeFilter === 'all' 

@@ -192,7 +192,7 @@ const Hero = () => {
   
   useEffect(() => {
     const checkMobile = () => {
-      setParticleCount(window.innerWidth < 768 ? 100 : 300);
+      setParticleCount(window.innerWidth < 768 ? 300 : 300);
     };
     checkMobile();
     window.addEventListener('resize', checkMobile);

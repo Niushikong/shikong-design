@@ -52,6 +52,13 @@ const workDetails = {
     idea: '采用现代设计风格，以黑白灰为主调，搭配亮色点缀。客厅、卧室、阳台等空间注重功能性与美观性的平衡，营造舒适实用的居住环境。通过简洁的线条与现代材质，呈现时尚简约的生活空间。',
     summary: '3D可视化方案成功帮助业主直观了解现代风格设计，提升了客户满意度。方案获得业主高度认可，成为后续装修施工的重要参考依据。'
   },
+  23: {
+    title: '简美风',
+    type: '3D可视化 / 室内设计',
+    bg: '为某住宅项目制作简美风格室内设计3D可视化方案，展示简洁优雅的居住空间效果，帮助业主提前感知空间布局与装饰效果。',
+    idea: '采用简美设计风格，以白色与暖木色为主调，搭配古典线条装饰。客厅、卧室、餐厅等空间注重功能性与美观性的平衡，营造温馨舒适的居住环境。通过精致的材质渲染与灯光设计，呈现优雅大气的生活空间。',
+    summary: '3D可视化方案成功帮助业主直观了解简美风格设计，提升了客户满意度。方案获得业主高度认可，成为后续装修施工的重要参考依据。'
+  },
   12: {
     title: '橱窗设计',
     type: '空间设计 / 橱窗展示',
@@ -263,6 +270,7 @@ const Works = () => {
     { id: 20, title: '北欧风', type: '3D可视化 / 室内设计', category: '3d', desc: '北欧风格室内设计3D可视化方案，展示清新自然的居住空间效果。', images: ['nordic-1.jpg', 'nordic-2.jpg', 'nordic-3.jpg', 'nordic-4.jpg', 'nordic-5.jpg', 'nordic-6.jpg', 'nordic-7.jpg', 'nordic-8.jpg', 'nordic-9.jpg', 'nordic-10.jpg', 'nordic-11.jpg', 'nordic-12.jpg', 'nordic-13.jpg', 'nordic-14.jpg', 'nordic-15.jpg', 'nordic-16.jpg', 'nordic-17.jpg', 'nordic-18.jpg', 'nordic-19.png'] },
     { id: 21, title: '轻奢风', type: '3D可视化 / 室内设计', category: '3d', desc: '轻奢风格室内设计3D可视化方案，展示精致优雅的居住空间效果。', images: ['luxury-1.jpg', 'luxury-2.jpg', 'luxury-3.jpg', 'luxury-4.jpg', 'luxury-5.jpg', 'luxury-6.jpg', 'luxury-7.jpg', 'luxury-8.jpg', 'luxury-9.png', 'luxury-10.png', 'luxury-11.png', 'luxury-12.png', 'luxury-13.jpg', 'luxury-14.jpg', 'luxury-15.jpg', 'luxury-16.jpg'] },
     { id: 22, title: '现代风', type: '3D可视化 / 室内设计', category: '3d', desc: '现代风格室内设计3D可视化方案，展示简约时尚的居住空间效果。', images: ['modern-style-1.jpg', 'modern-style-2.jpg', 'modern-style-3.jpg', 'modern-style-4.jpg', 'modern-style-5.jpg', 'modern-style-6.jpg', 'modern-style-7.jpg', 'modern-style-8.jpg', 'modern-style-9.jpg', 'modern-style-10.jpg', 'modern-style-11.jpg', 'modern-style-12.jpg', 'modern-style-13.jpg', 'modern-style-14.jpg', 'modern-style-15.jpg', 'modern-style-16.jpg', 'modern-style-17.jpg', 'modern-style-18.jpg', 'modern-style-19.jpg', 'modern-style-20.jpg', 'modern-style-21.jpg', 'modern-style-22.jpg', 'modern-style-23.jpg', 'modern-style-24.jpg', 'modern-style-25.jpg'] },
+    { id: 23, title: '简美风', type: '3D可视化 / 室内设计', category: '3d', desc: '简美风格室内设计3D可视化方案，展示简洁优雅的居住空间效果。', images: ['simple-american-1.png', 'simple-american-2.png', 'simple-american-3.png', 'simple-american-4.png', 'simple-american-5.png', 'simple-american-6.png', 'simple-american-7.png'] },
   ];
 
   const filteredWorks = activeFilter === 'all' 

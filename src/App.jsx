@@ -188,6 +188,17 @@ const Navbar = () => {
 
 // Hero组件 - 集成Antigravity
 const Hero = () => {
+  const [particleCount, setParticleCount] = useState(300);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setParticleCount(window.innerWidth < 768 ? 100 : 300);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const scrollToWorks = () => {
     const element = document.getElementById('works');
     if (element) {
@@ -200,7 +211,7 @@ const Hero = () => {
       <div className="hero-canvas">
         <Suspense fallback={<div className="canvas-placeholder"></div>}>
           <Antigravity
-            count={300}
+            count={particleCount}
             magnetRadius={12}
             ringRadius={7}
             waveSpeed={0.4}

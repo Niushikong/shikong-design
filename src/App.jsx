@@ -79,6 +79,48 @@ const workDetails = {
     bg: '为特普丽墙纸布艺品牌打造单品展示设计方案，涵盖高端壁纸系列、布艺窗帘、配套软装单品等产品视觉呈现。',
     idea: '采用场景化展示设计，将单品融入真实生活场景，让客户直观感受产品在实际空间中的应用效果。运用专业的灯光设计和陈列方式，凸显产品质感与设计细节。',
     summary: '单品设计方案有效提升了产品展示效果和客户购买体验，帮助品牌实现从单品销售到场景化营销的升级转型。'
+  },
+  12: {
+    title: '橱窗设计',
+    type: '空间设计 / 橱窗展示',
+    bg: '为各类品牌门店打造橱窗设计方案，涵盖中式、北欧、工业风、轻奢等多种设计风格，以视觉吸引力传递品牌调性与产品亮点。',
+    idea: '根据品牌定位与产品特性，定制主题化橱窗设计方案。运用色彩心理学与视觉层次原理，营造强烈的视觉冲击力。注重材质搭配与灯光设计，突出产品质感与设计细节。',
+    summary: '橱窗设计方案帮助品牌提升店铺吸引力，有效增加进店客流，成为品牌视觉营销的重要组成部分。'
+  },
+  13: {
+    title: '商务部投资促进事务局',
+    type: '空间设计 / 政府办公空间',
+    bg: '为商务部投资促进事务局设计现代化办公空间，需要体现政府机构的严谨专业性，同时营造开放、高效、亲民的政务服务氛围。',
+    idea: '采用简洁大气的设计语言，以白色与浅灰色为主调，搭配木色元素增添温度。合理规划接待区、会议室、办公区等功能分区，注重光线利用与空间层次感，打造现代化政务办公空间。',
+    summary: '设计方案提升了政府窗口形象，优化了政务服务环境，获得相关部门的高度认可，成为政务办公空间设计的参考案例。'
+  },
+  14: {
+    title: '观湖国际',
+    type: '空间设计 / 住宅设计',
+    bg: '为观湖国际高端住宅项目打造室内设计方案，注重空间利用、采光优化与居住舒适度，营造温馨雅致的居家氛围。',
+    idea: '以现代简约风格为基调，融入轻奢元素提升品质感。客厅采用开放式布局，增强空间通透感；卧室注重私密性与舒适度设计；儿童房兼顾安全性与趣味性，打造专属童趣空间。',
+    summary: '设计方案充分考虑业主生活需求与审美偏好，实现了功能与美学的完美结合，成为高端住宅室内设计的优秀案例。'
+  },
+  15: {
+    title: '58同城总部会议接待室',
+    type: '空间设计 / 办公空间',
+    bg: '为58同城总部设计会议接待室空间，需要满足大型会议、商务接待、媒体发布等多种功能需求，体现企业实力与品牌形象。',
+    idea: '采用现代简约设计风格，以灰色与木色为主调，搭配品牌橙色点缀。打造多功能会议空间，支持灵活布局与多种场景切换。注重声学设计与智能化配置，提升会议体验与效率。',
+    summary: '设计方案有效提升了企业形象展示能力，成为总部重要的对外接待窗口，获得企业高层与来访嘉宾的高度认可。'
+  },
+  16: {
+    title: '济南雷风展览展示有限公司',
+    type: '空间设计 / 展览展示',
+    bg: '为济南雷风展览展示有限公司设计企业展厅空间，展示公司业务范围、核心产品与技术实力，提升品牌形象与客户体验。',
+    idea: '采用开放式布局设计，融入科技感元素展现企业创新实力。合理规划产品展示区、案例展示区、接待洽谈区等功能区域，运用多媒体互动技术增强展示效果，打造沉浸式参观体验。',
+    summary: '展厅设计有效提升了企业形象展示能力，成为公司重要的对外宣传窗口，帮助企业在行业展会中脱颖而出，获得众多客户的关注与合作意向。'
+  },
+  17: {
+    title: '雅宝红城水吧',
+    type: '空间设计 / 商业空间',
+    bg: '为雅宝红城项目设计水吧休闲空间，需要打造温馨舒适的休闲氛围，满足业主日常休闲、社交聚会等需求，提升社区生活品质。',
+    idea: '采用现代简约设计风格，以蓝色与木色为主调，营造清新自然的水吧氛围。合理规划吧台操作区、休闲座位区、储物区等功能空间，注重灯光设计与软装搭配，打造舒适惬意的休闲场所。',
+    summary: '水吧设计方案成功营造了温馨舒适的休闲空间，成为社区居民喜爱的社交场所，有效提升了项目的居住体验与社区活力。'
   }
 };
 
@@ -230,7 +272,7 @@ const Works = () => {
   const works = [
     { id: 1, title: '特普丽墙纸布艺门店标准化设计', type: '门店美陈 / 连锁品牌', category: 'space', desc: '为特普丽墙纸打造全国连锁门店标准化设计体系，统一品牌视觉语言与空间体验。', images: ['work1.jpg', 'work1-2.jpg', 'work1-3.jpg', 'work1-4.jpg', 'work1-5.jpg', 'work1-6.jpg', 'work1-7.jpg'] },
     { id: 2, title: '渠道店', type: '门店美陈 / 连锁品牌', category: 'space', desc: '特普丽墙纸渠道店标准化设计，涵盖一字型、L型、U型三种空间布局方案，适配不同门店面积与场地条件。', images: ['work1-channel-s1-1.jpg', 'work1-channel-s1-2.jpg', 'work1-channel-s1-3.jpg', 'work1-channel-s1-4.jpg', 'work1-channel-s1-5.jpg', 'work1-channel-s1-6.jpg', 'work1-channel-l1.jpg', 'work1-channel-l2.jpg', 'work1-channel-l3.jpg', 'work1-channel-l4.jpg', 'work1-channel-l5.jpg', 'work1-channel-l6.jpg', 'work1-channel-l7.jpg', 'work1-channel-l8.jpg', 'work1-channel-u1.jpg', 'work1-channel-u2.jpg', 'work1-channel-u3.jpg', 'work1-channel-u4.jpg'] },
-    { id: 3, title: '58到家门店标准化设计', type: '室内工装 / 连锁品牌', category: 'space', desc: '为58到家线下服务门店设计标准化空间方案，提升品牌形象与服务体验。', images: ['work2.png'] },
+    { id: 3, title: '58到家门店标准化设计', type: '室内工装 / 连锁品牌', category: 'space', desc: '为58到家线下服务门店设计标准化空间方案，提升品牌形象与服务体验。', images: ['home-entry.jpg', 'home-vip.jpg', 'home-meeting.jpg', 'home-kid.jpg'] },
     { id: 4, title: '牙科医院整体空间设计', type: '医疗空间设计', category: 'space', desc: '兼顾医疗功能性、舒适感与视觉氛围，弱化冰冷感，打造温馨专业诊疗环境。' },
     { id: 5, title: '小区电子孪生沙盘', type: '3D可视化 / 数字沙盘', category: '3d', desc: '三维建模+实景还原，支持日照、噪音、户型可视化模拟，用于楼盘展示。' },
     { id: 6, title: '3D动态看盘&漫游动画', type: '动态视觉 / 三维动画', category: '3d', desc: '全场景动态漫游演示，立体呈现园区布局、配套与建筑细节。' },
@@ -239,6 +281,12 @@ const Works = () => {
     { id: 9, title: '办公空间整体规划设计', type: '工装设计', category: 'space', desc: '合理划分功能分区，兼顾办公效率、采光与团队交流氛围。' },
     { id: 10, title: '品牌视觉物料整套设计', type: '平面视觉 / 版式设计', category: 'visual', desc: '统一品牌视觉规范，完成海报、展板、宣传物料全套设计输出。' },
     { id: 11, title: '单品设计', type: '门店美陈 / 单品展示', category: 'space', desc: '特普丽墙纸布艺单品设计展示，涵盖高端壁纸系列、布艺窗帘、配套软装单品等。', images: ['work1-product-1.jpg', 'work1-product-2.jpg', 'work1-product-3.jpg'] },
+    { id: 12, title: '橱窗设计', type: '空间设计 / 橱窗展示', category: 'space', desc: '各类风格橱窗设计方案，涵盖中式、北欧、工业风、轻奢等多种设计风格，打造视觉焦点与品牌调性。', images: ['window-1.jpg', 'window-2.jpg', 'window-3.jpg', 'window-4.jpg', 'window-5.jpg', 'window-6.jpg', 'window-7.jpg', 'window-8.jpg', 'window-9.jpg', 'window-10.jpg', 'window-11.jpg', 'window-12.jpg', 'window-13.jpg', 'window-14.jpg', 'window-15.jpg', 'window-16.jpg', 'window-17.jpg', 'window-18.jpg', 'window-19.jpg', 'window-20.jpg', 'window-21.jpg', 'window-22.jpg', 'window-23.jpg', 'window-24.jpg', 'window-25.jpg', 'window-26.jpg', 'window-27.jpg', 'window-28.jpg', 'window-29.jpg', 'window-30.jpg'] },
+    { id: 13, title: '商务部投资促进事务局', type: '空间设计 / 政府办公空间', category: 'space', desc: '为商务部投资促进事务局设计现代化政务办公空间，打造开放、高效、亲民的政府窗口形象。', images: ['invest-1.jpg', 'invest-2.jpg', 'invest-3.jpg', 'invest-4.jpg', 'invest-5.jpg', 'invest-6.jpg', 'invest-7.jpg', 'invest-8.jpg', 'invest-9.jpg', 'invest-10.jpg'] },
+    { id: 14, title: '观湖国际', type: '空间设计 / 住宅设计', category: 'space', desc: '观湖国际高端住宅室内设计方案，涵盖客厅、卧室、儿童房、卫生间等空间设计，打造温馨雅致的居家氛围。', images: ['lake-1.jpg', 'lake-2.jpg', 'lake-3.jpg', 'lake-4.jpg', 'lake-5.jpg', 'lake-6.jpg'] },
+    { id: 15, title: '58同城总部会议接待室', type: '空间设计 / 办公空间', category: 'space', desc: '为58同城总部设计会议接待室空间，满足大型会议、商务接待、媒体发布等多种功能需求。', images: ['58meeting-1.jpg', '58meeting-2.jpg', '58meeting-3.jpg', '58meeting-4.jpg', '58meeting-5.jpg'] },
+    { id: 16, title: '济南雷风展览展示有限公司', type: '空间设计 / 展览展示', category: 'space', desc: '为济南雷风展览展示有限公司设计企业展厅空间，展示公司业务范围、核心产品与技术实力。', images: ['leifeng-1.jpg', 'leifeng-2.jpg', 'leifeng-3.jpg', 'leifeng-4.jpg', 'leifeng-5.jpg'] },
+    { id: 17, title: '雅宝红城水吧', type: '空间设计 / 商业空间', category: 'space', desc: '为雅宝红城项目设计水吧休闲空间，打造温馨舒适的休闲氛围，提升社区生活品质。', images: ['yabao-1.jpg', 'yabao-2.jpg', 'yabao-3.jpg', 'yabao-4.jpg'] },
   ];
 
   const filteredWorks = activeFilter === 'all' 

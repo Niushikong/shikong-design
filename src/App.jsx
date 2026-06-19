@@ -314,6 +314,24 @@ const Works = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>&times;</button>
             <div className="modal-body">
+              <div className="modal-header">
+                <h2>{selectedWork.title}</h2>
+                <span className="work-type">{selectedWork.type}</span>
+              </div>
+              <div className="modal-intro">
+                <div className="modal-section">
+                  <h4>项目背景 & 设计需求</h4>
+                  <p>{selectedWork.bg}</p>
+                </div>
+                <div className="modal-section">
+                  <h4>设计思路 & 创意亮点</h4>
+                  <p>{selectedWork.idea}</p>
+                </div>
+                <div className="modal-section">
+                  <h4>设计总结</h4>
+                  <p>{selectedWork.summary}</p>
+                </div>
+              </div>
               <div className="modal-gallery">
                 {selectedWork.imageCategories && Object.keys(selectedWork.imageCategories).length > 0 && (
                   <>
@@ -362,7 +380,7 @@ const Works = () => {
                   </>
                 )}
                 {selectedWork.images && selectedWork.images.length > 0 ? (
-                  <div className="masonry-grid">
+                  <div className="single-column-grid">
                     {(() => {
                       let displayImages = selectedWork.images;
                       let labels = [];
@@ -444,11 +462,11 @@ const Works = () => {
                         return (
                           <div 
                             key={index} 
-                            className="masonry-item"
+                            className="single-column-item"
                             onClick={() => openFullscreen(selectedWork.images.indexOf(imgSrc))}
                           >
                             <img src={imgSrc} alt={imgAlt} />
-                            <div className="masonry-overlay">
+                            <div className="single-column-overlay">
                               <span>{imgAlt}</span>
                             </div>
                           </div>
@@ -459,22 +477,6 @@ const Works = () => {
                 ) : (
                   <div className="image-placeholder large"><span>作品大图</span></div>
                 )}
-              </div>
-              <div className="modal-info">
-                <h2>{selectedWork.title}</h2>
-                <span className="work-type">{selectedWork.type}</span>
-                <div className="modal-section">
-                  <h4>项目背景 & 设计需求</h4>
-                  <p>{selectedWork.bg}</p>
-                </div>
-                <div className="modal-section">
-                  <h4>设计思路 & 创意亮点</h4>
-                  <p>{selectedWork.idea}</p>
-                </div>
-                <div className="modal-section">
-                  <h4>设计总结</h4>
-                  <p>{selectedWork.summary}</p>
-                </div>
               </div>
             </div>
           </div>

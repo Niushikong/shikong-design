@@ -333,7 +333,7 @@ const Works = () => {
               >
                 <div className="work-image">
                   {work.images?.[0] ? (
-                    <img src={work.images[0]} alt={work.title} />
+                    <img src={work.images[0]} alt={work.title} loading="lazy" />
                   ) : (
                     <div className="image-placeholder"><span>作品图</span></div>
                   )}
@@ -381,7 +381,7 @@ const Works = () => {
                         className="single-column-item"
                         onClick={() => openFullscreen(index)}
                       >
-                        <img src={imgSrc} alt={`作品图${index + 1}`} />
+                        <img src={imgSrc} alt={`作品图${index + 1}`} loading="lazy" />
                       </div>
                     ))}
                   </div>

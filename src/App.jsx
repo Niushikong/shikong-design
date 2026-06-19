@@ -458,17 +458,13 @@ const Works = () => {
                       }
                       
                       return displayImages.map((imgSrc, index) => {
-                        const imgAlt = labels[index] || `作品图${index + 1}`;
                         return (
                           <div 
                             key={index} 
                             className="single-column-item"
                             onClick={() => openFullscreen(selectedWork.images.indexOf(imgSrc))}
                           >
-                            <img src={imgSrc} alt={imgAlt} />
-                            <div className="single-column-overlay">
-                              <span>{imgAlt}</span>
-                            </div>
+                            <img src={imgSrc} alt={`作品图${index + 1}`} />
                           </div>
                         );
                       });

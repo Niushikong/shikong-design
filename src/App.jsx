@@ -73,6 +73,13 @@ const workDetails = {
     idea: '采用写实风格制作小区整体模型，涵盖楼栋、景观道路、儿童游乐区、休闲凉亭等配套设施。通过无人机漫游视角与室内空间过渡动画，全面展示小区品质与居住体验。',
     summary: '3D电子沙盘方案成功帮助开发商直观展示项目优势，提升客户购房决策效率。方案获得开发商高度认可，成为房产营销的重要工具。'
   },
+  26: {
+    title: '房产小安',
+    type: 'AI数字人 / 智能客服',
+    bg: '为某房地产项目打造AI数字人形象"小安"，作为智能客服为客户提供房产咨询、户型介绍、vr带看等服务，提升案场接待效率与客户体验。',
+    idea: '设计亲切专业的数字人形象，结合智能语音交互与实时渲染技术，实现24小时在线服务。支持多轮对话问答、表情动作交互，为客户提供沉浸式的购房咨询体验。',
+    summary: '房产小安AI数字人已在全国多个楼盘案场上线，有效提升客户接待效率30%，减少人工客服成本，获得开发商和客户的一致好评。'
+  },
   12: {
     title: '橱窗设计',
     type: '空间设计 / 橱窗展示',
@@ -298,6 +305,7 @@ const Works = () => {
     { id: 23, title: '简美风', type: '3D可视化 / 室内设计', category: '3d', desc: '简美风格室内设计3D可视化方案，展示简洁优雅的居住空间效果。', images: ['simple-american-1.png', 'simple-american-2.png', 'simple-american-3.png', 'simple-american-4.png', 'simple-american-5.png', 'simple-american-6.png', 'simple-american-7.png'] },
     { id: 24, title: '新中式', type: '3D可视化 / 室内设计', category: '3d', desc: '新中式风格室内设计3D可视化方案，展示传统与现代融合的居住空间效果。', images: ['chinese-new-1.jpg', 'chinese-new-2.jpg', 'chinese-new-3.jpg', 'chinese-new-4.jpg', 'chinese-new-5.png', 'chinese-new-6.jpg', 'chinese-new-7.jpg', 'chinese-new-8.jpg', 'chinese-new-9.jpg', 'chinese-new-10.jpg', 'chinese-new-11.jpg', 'chinese-new-12.jpg', 'chinese-new-13.jpg', 'chinese-new-14.jpg', 'chinese-new-15.jpg', 'chinese-new-16.jpg', 'chinese-new-17.jpg', 'chinese-new-18.jpg'] },
     { id: 25, title: '3D电子沙盘', type: '3D可视化 / 漫游动画', category: '3d', desc: '为住宅项目制作的3D电子沙盘漫游动画，全方位展示小区规划、景观、建筑及室内空间效果。', images: ['sand-1.jpg', 'sand-2.jpg', 'sand-3.png', 'sand-4.png', 'sand-5.png', 'sand-6.png', 'sand-7.png', 'sand-8.png', 'sand-9.png', 'sand-10.jpg'] },
+    { id: 26, title: '房产小安', type: 'AI数字人 / 智能客服', category: 'ai', desc: '为房地产项目打造的AI数字人形象"小安"，作为智能客服提供房产咨询、vr带看等服务。', images: ['sand-1.jpg', 'sand-2.jpg', 'sand-3.png', 'sand-4.png', 'sand-5.png', 'sand-6.png', 'sand-7.png', 'sand-8.png', 'sand-9.png', 'sand-10.jpg'] },
   ];
 
   const filteredWorks = activeFilter === 'all' 

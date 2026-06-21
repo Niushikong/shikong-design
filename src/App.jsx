@@ -66,6 +66,13 @@ const workDetails = {
     idea: '采用新中式设计风格，以深木色与米白色为主调，搭配中式传统元素与现代简约线条。客厅、卧室、书房等空间注重对称美学与文化内涵，营造典雅大气的生活空间。通过精致的材质渲染与灯光设计，呈现东方韵味与现代舒适的完美融合。',
     summary: '3D可视化方案成功帮助业主直观了解新中式风格设计，提升了客户满意度。方案获得业主高度认可，成为后续装修施工的重要参考依据。'
   },
+  25: {
+    title: '3D电子沙盘',
+    type: '3D可视化 / 漫游动画',
+    bg: '为某住宅项目制作3D电子沙盘漫游动画方案，通过数字化方式展示小区整体规划、景观设计、建筑外观及室内空间效果，帮助业主全方位了解项目特色。',
+    idea: '采用写实风格制作小区整体模型，涵盖楼栋、景观道路、儿童游乐区、休闲凉亭等配套设施。通过无人机漫游视角与室内空间过渡动画，全面展示小区品质与居住体验。',
+    summary: '3D电子沙盘方案成功帮助开发商直观展示项目优势，提升客户购房决策效率。方案获得开发商高度认可，成为房产营销的重要工具。'
+  },
   12: {
     title: '橱窗设计',
     type: '空间设计 / 橱窗展示',
@@ -290,6 +297,7 @@ const Works = () => {
     { id: 22, title: '现代风', type: '3D可视化 / 室内设计', category: '3d', desc: '现代风格室内设计3D可视化方案，展示简约时尚的居住空间效果。', images: ['modern-style-1.jpg', 'modern-style-2.jpg', 'modern-style-3.jpg', 'modern-style-4.jpg', 'modern-style-5.jpg', 'modern-style-6.jpg', 'modern-style-7.jpg', 'modern-style-8.jpg', 'modern-style-9.jpg', 'modern-style-10.jpg', 'modern-style-11.jpg', 'modern-style-12.jpg', 'modern-style-13.jpg', 'modern-style-14.jpg', 'modern-style-15.jpg', 'modern-style-16.jpg', 'modern-style-17.jpg', 'modern-style-18.jpg', 'modern-style-19.jpg', 'modern-style-20.jpg', 'modern-style-21.jpg', 'modern-style-22.jpg', 'modern-style-23.jpg', 'modern-style-24.jpg', 'modern-style-25.jpg'] },
     { id: 23, title: '简美风', type: '3D可视化 / 室内设计', category: '3d', desc: '简美风格室内设计3D可视化方案，展示简洁优雅的居住空间效果。', images: ['simple-american-1.png', 'simple-american-2.png', 'simple-american-3.png', 'simple-american-4.png', 'simple-american-5.png', 'simple-american-6.png', 'simple-american-7.png'] },
     { id: 24, title: '新中式', type: '3D可视化 / 室内设计', category: '3d', desc: '新中式风格室内设计3D可视化方案，展示传统与现代融合的居住空间效果。', images: ['chinese-new-1.jpg', 'chinese-new-2.jpg', 'chinese-new-3.jpg', 'chinese-new-4.jpg', 'chinese-new-5.png', 'chinese-new-6.jpg', 'chinese-new-7.jpg', 'chinese-new-8.jpg', 'chinese-new-9.jpg', 'chinese-new-10.jpg', 'chinese-new-11.jpg', 'chinese-new-12.jpg', 'chinese-new-13.jpg', 'chinese-new-14.jpg', 'chinese-new-15.jpg', 'chinese-new-16.jpg', 'chinese-new-17.jpg', 'chinese-new-18.jpg'] },
+    { id: 25, title: '3D电子沙盘', type: '3D可视化 / 漫游动画', category: '3d', desc: '为住宅项目制作的3D电子沙盘漫游动画，全方位展示小区规划、景观、建筑及室内空间效果。', images: ['sand-1.jpg', 'sand-2.jpg', 'sand-3.png', 'sand-4.png', 'sand-5.png', 'sand-6.png', 'sand-7.png', 'sand-8.png', 'sand-9.png', 'sand-10.jpg'] },
   ];
 
   const filteredWorks = activeFilter === 'all' 

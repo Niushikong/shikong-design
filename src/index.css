@@ -722,19 +722,31 @@ img {
 
 .modal-header {
     text-align: center;
-    padding-bottom: var(--spacing-md);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .modal-header h2 {
     font-size: 1.5rem;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0.15rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.modal-header .work-type {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+    font-weight: 500;
 }
 
 .modal-intro {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: 0.75rem;
+    padding-top: 0.5rem;
 }
 
 .modal-gallery {
@@ -1022,21 +1034,23 @@ img {
 }
 
 .modal-section {
-    margin-top: var(--spacing-md);
+    margin-top: 0;
 }
 
 .modal-section h4 {
-    font-size: 1rem;
+    font-size: 0.85rem;
     color: var(--primary);
-    margin-bottom: var(--spacing-xs);
-    padding-bottom: var(--spacing-xs);
-    border-bottom: 1px solid var(--light-gray);
+    margin-bottom: 0.35rem;
+    padding-bottom: 0.15rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-weight: 600;
+    letter-spacing: 0.02em;
 }
 
 .modal-section p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--dark-gray);
-    line-height: 1.8;
+    line-height: 1.65;
 }
 
 /* ===== 技能板块 ===== */

@@ -87,6 +87,13 @@ const workDetails = {
     idea: '设计可爱亲和的海獭数字人形象，蓝色为主色调象征金融行业的专业与信任。结合NLP自然语言处理与金融知识图谱，实现智能问答与个性化理财建议。',
     summary: '金融海獭AI数字人已在金融机构线上平台上线，有效提升客户咨询响应速度，增强品牌亲和力，获得客户高度认可。'
   },
+  28: {
+    title: '老姚AI数字人',
+    type: 'AI数字人 / 品牌代言',
+    bg: '为"神奇日"品牌打造AI数字人形象"老姚"，作为品牌代言人进行产品推广、直播带货、品牌宣传等活动，提升品牌知名度与用户互动体验。',
+    idea: '设计真实感强的数字人形象，采用红色为主色调呼应品牌视觉系统。结合AI语音合成与表情驱动技术，实现自然流畅的互动体验，支持直播、短视频等多种应用场景。',
+    summary: '老姚AI数字人已成为"神奇日"品牌的核心形象代言人，有效提升品牌曝光度与用户粘性，直播带货转化率提升40%，获得品牌方高度认可。'
+  },
   12: {
     title: '橱窗设计',
     type: '空间设计 / 橱窗展示',
@@ -314,6 +321,7 @@ const Works = () => {
     { id: 25, title: '3D电子沙盘', type: '3D可视化 / 漫游动画', category: '3d', desc: '为住宅项目制作的3D电子沙盘漫游动画，全方位展示小区规划、景观、建筑及室内空间效果。', images: ['sand-1.jpg', 'sand-2.jpg', 'sand-3.png', 'sand-4.png', 'sand-5.png', 'sand-6.png', 'sand-7.png', 'sand-8.png', 'sand-9.png', 'sand-10.jpg'] },
     { id: 26, title: '房产小安', type: 'AI数字人 / 智能客服', category: 'ai', desc: '为房地产项目打造的AI数字人形象"小安"，作为智能客服提供房产咨询、vr带看等服务。', images: ['housing-1.jpg', 'housing-2.mp4', 'housing-3.mp4', 'housing-4.png'] },
     { id: 27, title: '金融海獭', type: 'AI数字人 / 金融服务', category: 'ai', desc: '为金融机构打造的AI数字人形象"海獭"，作为智能理财顾问提供投资咨询、产品介绍等服务。', images: ['otter-1.jpg', 'otter-2.jpg'] },
+    { id: 28, title: '老姚AI数字人', type: 'AI数字人 / 品牌代言', category: 'ai', desc: '为"神奇日"品牌打造的AI数字人形象"老姚"，作为品牌代言人进行产品推广、直播带货等活动。', images: ['laoyao-1.jpg', 'laoyao-2.mp4'] },
   ];
 
   const filteredWorks = activeFilter === 'all' 

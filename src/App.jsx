@@ -344,7 +344,7 @@ const Works = () => {
               >
                 <div className="work-image">
                   {work.images?.[0] ? (
-                    <img src={work.images[0]} alt={work.title} loading="lazy" />
+                    <img src={work.images[0]} alt={work.title} />
                   ) : (
                     <div className="image-placeholder"><span>作品图</span></div>
                   )}
@@ -639,23 +639,47 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const handleLoad = () => {
-      setIsLoading(false);
+    const preloadImages = () => {
+      const criticalImages = ['profile.png', 'wechat-qr.png'];
+      let loadedCount = 0;
+      const totalCount = criticalImages.length;
+
+      if (totalCount === 0) {
+        setIsLoading(false);
+        return;
+      }
+
+      criticalImages.forEach(src => {
+        const img = new Image();
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount >= totalCount) {
+            setIsLoading(false);
+          }
+        };
+        img.onerror = () => {
+          loadedCount++;
+          if (loadedCount >= totalCount) {
+            setIsLoading(false);
+          }
+        };
+        img.src = src;
+      });
     };
 
     if (document.readyState === 'complete') {
-      setTimeout(handleLoad, 500);
+      preloadImages();
     } else {
-      window.addEventListener('load', () => setTimeout(handleLoad, 500));
+      window.addEventListener('load', preloadImages);
     }
 
-    return () => window.removeEventListener('load', handleLoad);
+    return () => window.removeEventListener('load', preloadImages);
   }, []);
 
   return (
     <>
       {isLoading && (
-        <div className={`preloader ${!isLoading ? 'hidden' : ''}`}>
+        <div className="preloader">
           <div className="preloader-content">
             <div className="preloader-logo">SHIKONG</div>
             <div className="preloader-dots">
